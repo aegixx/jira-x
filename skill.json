@@ -5,16 +5,21 @@
         "en-US": {
           "summary": "JIRA Control via Alexa",
           "examplePhrases": [
-            "Alexa ask jeera x the status of H.O.J. 123",
-            "Alexa ask jeera x what the status of H.O.J. 1.2.3. is"
+            "Alexa, ask JIRA-X the status of ABC 123",
+            "Alexa, tell JIRA-X to update ABC 537 to Complete",
+            "Alexa, tell JIRA-X to move ABC 5-3-7 to In Progress"
           ],
-          "name": "jira-x",
-          "description": "Use Alexa to get and update JIRA issues."
+          "keywords": [
+            "jira",
+            "atlassian"
+          ],
+          "name": "JIRA-X",
+          "description": "JIRA-X (pronounced JEE-RUH X) allows a developer to get that status of and update JIRA issues quickly without the additional hassle of opening the site and finding the appropriate issue."
         }
       },
       "isAvailableWorldwide": true,
-      "testingInstructions": "Sample Testing Instructions.",
-      "category": "PRODUCTIVITY",
+      "testingInstructions": "1) TBD: Connect to JIRA\n2) Ask Alexa: \"Ask JIRA-X the status of A.B.C. 123\"\n(JIRA-X is pronounced \"jeeruh X\")",
+      "category": "ORGANIZERS_AND_ASSISTANTS",
       "distributionCountries": []
     },
     "apis": {
@@ -24,6 +29,13 @@
         }
       }
     },
-    "manifestVersion": "1.0"
+    "manifestVersion": "1.0",
+    "privacyAndCompliance": {
+      "allowsPurchases": false,
+      "isExportCompliant": true,
+      "containsAds": false,
+      "isChildDirected": false,
+      "usesPersonalInfo": false
+    }
   }
 }

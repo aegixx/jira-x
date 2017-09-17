@@ -2,7 +2,7 @@
   "deploy_settings": {
     "default": {
       "skill_id": "amzn1.ask.skill.8437b31e-1d25-459d-b549-05072051eba9",
-      "was_cloned": true
+      "was_cloned": false
     }
   }
 }
