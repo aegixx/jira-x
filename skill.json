@@ -1,0 +1,28 @@
+{
+  "skillManifest": {
+    "publishingInformation": {
+      "locales": {
+        "en-US": {
+          "summary": "JIRA Control via Alexa",
+          "examplePhrases": [
+            "Alexa what is the status of H-O-J 123"
+          ],
+          "name": "jira-x",
+          "description": "Use Alexa to get and update JIRA issues."
+        }
+      },
+      "isAvailableWorldwide": true,
+      "testingInstructions": "Sample Testing Instructions.",
+      "category": "EDUCATION_AND_REFERENCE",
+      "distributionCountries": []
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "sourceDir": "lambda/jira-x-lambda"
+        }
+      }
+    },
+    "manifestVersion": "1.0"
+  }
+}

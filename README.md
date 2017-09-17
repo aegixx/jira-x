@@ -1,2 +1,1 @@
-# jira-x
-JIRA Control via Alexa
+# JIRA-X - JIRA Control via Alexa

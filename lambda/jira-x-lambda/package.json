@@ -1,0 +1,16 @@
+{
+  "name": "jira-x-lambda",
+  "version": "1.0.0",
+  "description": "JIRA-X Lambda Skill",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "https://github.com/aegixx/jira-x",
+  "license": "MIT",
+  "dependencies": {
+    "alexa-sdk": "^1.0.0",
+    "jira-client": "^6.4.0",
+    "request": "^2.81.0",
+    "request-promise-native": "^1.0.4"
+  }
+}
