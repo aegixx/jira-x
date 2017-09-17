@@ -14,7 +14,9 @@
             "atlassian"
           ],
           "name": "JIRA-X",
-          "description": "JIRA-X (pronounced JEE-RUH X) allows a developer to get that status of and update JIRA issues quickly without the additional hassle of opening the site and finding the appropriate issue."
+          "description": "JIRA-X (pronounced JEE-RUH X) allows a developer to get that status of and update JIRA issues quickly without the additional hassle of opening the site and finding the appropriate issue.",
+          "smallIconUri": "https://s3.amazonaws.com/aegixx-public/images/JIRA-X_108.png",
+          "largeIconUri": "https://s3.amazonaws.com/aegixx-public/images/JIRA-X_512.png"
         }
       },
       "isAvailableWorldwide": true,
@@ -25,6 +27,7 @@
     "apis": {
       "custom": {
         "endpoint": {
+          "uri": "arn:aws:lambda:us-east-1:963035821509:function:ask-custom-JIRA-X-default",
           "sourceDir": "lambda/jira-x-lambda"
         }
       }

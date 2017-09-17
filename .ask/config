@@ -2,7 +2,22 @@
   "deploy_settings": {
     "default": {
       "skill_id": "amzn1.ask.skill.8437b31e-1d25-459d-b549-05072051eba9",
-      "was_cloned": false
+      "was_cloned": false,
+      "merge": {
+        "skillManifest": {
+          "apis": {
+            "custom": {
+              "regions": {
+                "default": {
+                  "endpoint": {
+                    "uri": "arn:aws:lambda:us-east-1:963035821509:function:ask-custom-JIRA-X-default"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
