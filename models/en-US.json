@@ -1,47 +1,111 @@
 {
-    "interactionModel":{
-        "languageModel":{
-            "invocationName":"jeera x",
-            "types":[],
-            "intents":[
-                {
-                  "name": "AMAZON.CancelIntent",
-                  "samples": []
-                },
-                {
-                  "name": "AMAZON.HelpIntent",
-                  "samples": []
-                },
-                {
-                  "name": "AMAZON.StopIntent",
-                  "samples": []
-                },
-                {
-                    "name":"HelloWorldIntent",
-                    "slots":[
-
-                    ],
-                    "samples":[
-                        "hello",
-                        "say hello",
-                        "say hello world"
-                    ]
-                },
-                {
-                    "name":"MyNameIsIntent",
-                    "slots":[
-                        {
-                            "name":"name",
-                            "type":"AMAZON.US_FIRST_NAME"
-                        }
-                    ],
-                    "samples":[
-                        "my name is {name}",
-                        "i am {name}",
-                        "you can call me {name}"
-                    ]
-                }
-            ]
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "jeera x",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "GetStatusIntent",
+          "slots": [
+            {
+              "name": "project",
+              "type": "JIRAProject",
+              "samples": [
+                "{project}"
+              ]
+            },
+            {
+              "name": "issueNum",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "{issueNum}"
+              ]
+            }
+          ],
+          "samples": [
+            "the status of {project} {issueNum} ",
+            "what is the status of {project} {issueNum}"
+          ]
         }
-    }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "Dev Ops",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "P.L.M.E.",
+                "synonyms": []
+              }
+            }
+          ],
+          "name": "JIRAProject"
+        }
+      ]
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "GetStatusIntent",
+          "confirmationRequired": false,
+          "slots": [
+            {
+              "name": "project",
+              "type": "JIRAProject",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Intent-GetStatusIntent.IntentSlot-project"
+              }
+            },
+            {
+              "name": "issueNum",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Intent-GetStatusIntent.IntentSlot-issueNum"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Intent-GetStatusIntent.IntentSlot-project",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "For what project?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Intent-GetStatusIntent.IntentSlot-issueNum",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What is the issue number?"
+          }
+        ]
+      }
+    ]
+  }
 }

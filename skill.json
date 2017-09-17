@@ -5,7 +5,8 @@
         "en-US": {
           "summary": "JIRA Control via Alexa",
           "examplePhrases": [
-            "Alexa what is the status of H-O-J 123"
+            "Alexa ask jeera x the status of H.O.J. 123",
+            "Alexa ask jeera x what the status of H.O.J. 1.2.3. is"
           ],
           "name": "jira-x",
           "description": "Use Alexa to get and update JIRA issues."
@@ -13,7 +14,7 @@
       },
       "isAvailableWorldwide": true,
       "testingInstructions": "Sample Testing Instructions.",
-      "category": "EDUCATION_AND_REFERENCE",
+      "category": "PRODUCTIVITY",
       "distributionCountries": []
     },
     "apis": {
